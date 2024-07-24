@@ -12,8 +12,8 @@ using MyGalaxy_Auction_Data_Access.Context;
 namespace MyGalaxy_Auction_Data_Access.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240722152346_initial1")]
-    partial class initial1
+    [Migration("20240723105336_mig1")]
+    partial class mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -189,7 +189,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
 
                     b.HasIndex("VehicleId");
 
-                    b.ToTable("Bid");
+                    b.ToTable("Bids");
                 });
 
             modelBuilder.Entity("MyGalaxy_Auction_Data_Access.Domain.PaymentHistory", b =>
@@ -219,7 +219,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
 
                     b.HasIndex("VehicleId");
 
-                    b.ToTable("PaymentHistory");
+                    b.ToTable("PaymentHistories");
                 });
 
             modelBuilder.Entity("MyGalaxy_Auction_Data_Access.Domain.Vehicle", b =>
@@ -278,7 +278,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("Vehicle");
+                    b.ToTable("Vehicles");
                 });
 
             modelBuilder.Entity("MyGalaxy_Auction_Data_Access.Models.ApplicationUser", b =>

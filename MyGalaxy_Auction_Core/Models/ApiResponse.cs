@@ -11,6 +11,7 @@ namespace MyGalaxy_Auction_Core.Models
     {
         public ApiResponse()
         {
+            ErrorMessages = new List<string>();
         }
 
         public HttpStatusCode StatusCode { get; set; }

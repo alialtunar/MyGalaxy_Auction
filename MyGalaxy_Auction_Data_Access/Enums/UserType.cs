@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyGalaxy_Auction_Core.Mapper
+namespace MyGalaxy_Auction_Data_Access.Enums
 {
-    public class MappingProfile
+    public enum UserType
     {
-        public MappingProfile()
-        {
-        }
+        NormalUser,
+        Seller,
+        Administrator
     }
 }

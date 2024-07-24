@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MyGalaxy_Auction_Data_Access.Migrations
 {
     /// <inheritdoc />
-    public partial class initial1 : Migration
+    public partial class mig1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -160,7 +160,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Vehicle",
+                name: "Vehicles",
                 columns: table => new
                 {
                     VehicleId = table.Column<int>(type: "int", nullable: false)
@@ -181,9 +181,9 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vehicle", x => x.VehicleId);
+                    table.PrimaryKey("PK_Vehicles", x => x.VehicleId);
                     table.ForeignKey(
-                        name: "FK_Vehicle_AspNetUsers_SellerId",
+                        name: "FK_Vehicles_AspNetUsers_SellerId",
                         column: x => x.SellerId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -191,7 +191,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Bid",
+                name: "Bids",
                 columns: table => new
                 {
                     BidId = table.Column<int>(type: "int", nullable: false)
@@ -204,23 +204,23 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bid", x => x.BidId);
+                    table.PrimaryKey("PK_Bids", x => x.BidId);
                     table.ForeignKey(
-                        name: "FK_Bid_AspNetUsers_UserId",
+                        name: "FK_Bids_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Bid_Vehicle_VehicleId",
+                        name: "FK_Bids_Vehicles_VehicleId",
                         column: x => x.VehicleId,
-                        principalTable: "Vehicle",
+                        principalTable: "Vehicles",
                         principalColumn: "VehicleId",
                         onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
-                name: "PaymentHistory",
+                name: "PaymentHistories",
                 columns: table => new
                 {
                     PaymentHistoryId = table.Column<int>(type: "int", nullable: false)
@@ -232,17 +232,17 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PaymentHistory", x => x.PaymentHistoryId);
+                    table.PrimaryKey("PK_PaymentHistories", x => x.PaymentHistoryId);
                     table.ForeignKey(
-                        name: "FK_PaymentHistory_AspNetUsers_UserId",
+                        name: "FK_PaymentHistories_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PaymentHistory_Vehicle_VehicleId",
+                        name: "FK_PaymentHistories_Vehicles_VehicleId",
                         column: x => x.VehicleId,
-                        principalTable: "Vehicle",
+                        principalTable: "Vehicles",
                         principalColumn: "VehicleId",
                         onDelete: ReferentialAction.NoAction);
                 });
@@ -287,28 +287,28 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bid_UserId",
-                table: "Bid",
+                name: "IX_Bids_UserId",
+                table: "Bids",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bid_VehicleId",
-                table: "Bid",
+                name: "IX_Bids_VehicleId",
+                table: "Bids",
                 column: "VehicleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PaymentHistory_UserId",
-                table: "PaymentHistory",
+                name: "IX_PaymentHistories_UserId",
+                table: "PaymentHistories",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PaymentHistory_VehicleId",
-                table: "PaymentHistory",
+                name: "IX_PaymentHistories_VehicleId",
+                table: "PaymentHistories",
                 column: "VehicleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Vehicle_SellerId",
-                table: "Vehicle",
+                name: "IX_Vehicles_SellerId",
+                table: "Vehicles",
                 column: "SellerId");
         }
 
@@ -331,16 +331,16 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Bid");
+                name: "Bids");
 
             migrationBuilder.DropTable(
-                name: "PaymentHistory");
+                name: "PaymentHistories");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Vehicle");
+                name: "Vehicles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
