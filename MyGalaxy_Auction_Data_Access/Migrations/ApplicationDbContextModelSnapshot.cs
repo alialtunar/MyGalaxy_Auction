@@ -227,8 +227,9 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VehicleId"));
 
-                    b.Property<int>("AdditionalInformation")
-                        .HasColumnType("int");
+                    b.Property<string>("AdditionalInformation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("AuctionPrice")
                         .HasColumnType("float");

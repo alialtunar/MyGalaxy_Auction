@@ -172,7 +172,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                     Millage = table.Column<int>(type: "int", nullable: false),
                     PlateNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AuctionPrice = table.Column<double>(type: "float", nullable: false),
-                    AdditionalInformation = table.Column<int>(type: "int", nullable: false),
+                    AdditionalInformation = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),

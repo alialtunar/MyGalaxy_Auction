@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace MyGalaxy_Auction_Business.Dtos
 
         public double AuctionPrice { get; set; }
 
-        public int AdditionalInformation { get; set; }
+        public string AdditionalInformation { get; set; }
 
         public DateTime StartTime { get; set; }
 
@@ -33,5 +34,7 @@ namespace MyGalaxy_Auction_Business.Dtos
         public string Image { get; set; }
 
         public string SellerId { get; set; }
+
+        public IFormFile File { get; set; }
     }
 }

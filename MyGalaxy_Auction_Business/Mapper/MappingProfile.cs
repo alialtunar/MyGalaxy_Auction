@@ -15,6 +15,7 @@ namespace MyGalaxy_Auction_Business.Mapper
         public MappingProfile()
         {
             CreateMap<CreateVehicleDTO,Vehicle>().ReverseMap();
+            CreateMap<UpdateVehicleDTO, Vehicle>().ReverseMap();
 
         }
     }

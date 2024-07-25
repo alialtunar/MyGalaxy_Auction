@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace MyGalaxy_Auction_Data_Access.Domain
@@ -27,7 +28,7 @@ namespace MyGalaxy_Auction_Data_Access.Domain
 
         public double AuctionPrice { get; set; }
 
-        public int AdditionalInformation { get; set; }
+        public string AdditionalInformation { get; set; }
 
         public DateTime StartTime { get; set; }
 
@@ -38,7 +39,7 @@ namespace MyGalaxy_Auction_Data_Access.Domain
         public string Image { get; set; }
 
         public string SellerId { get; set; }
-
+        [JsonIgnore]
         public ApplicationUser Seller { get; set; }
 
         public virtual List<Bid> Bids { get; set; }

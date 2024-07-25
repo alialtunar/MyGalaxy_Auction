@@ -12,7 +12,7 @@ using MyGalaxy_Auction_Data_Access.Context;
 namespace MyGalaxy_Auction_Data_Access.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240723105336_mig1")]
+    [Migration("20240725160031_mig1")]
     partial class mig1
     {
         /// <inheritdoc />
@@ -230,8 +230,9 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VehicleId"));
 
-                    b.Property<int>("AdditionalInformation")
-                        .HasColumnType("int");
+                    b.Property<string>("AdditionalInformation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("AuctionPrice")
                         .HasColumnType("float");
