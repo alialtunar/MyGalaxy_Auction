@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MyGalaxy_Auction_Data_Access.Migrations
 {
     /// <inheritdoc />
-    public partial class mig1 : Migration
+    public partial class mig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -168,6 +168,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                     BrandAndModel = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ManufacturingYear = table.Column<int>(type: "int", nullable: false),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EngineCapacity = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Millage = table.Column<int>(type: "int", nullable: false),
                     PlateNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),

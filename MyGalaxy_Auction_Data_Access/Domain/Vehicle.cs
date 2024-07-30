@@ -20,6 +20,8 @@ namespace MyGalaxy_Auction_Data_Access.Domain
 
         public string Color { get; set; }
 
+        public decimal EngineCapacity { get; set; }
+
         public decimal Price { get; set; }
 
         public int Millage { get; set; }

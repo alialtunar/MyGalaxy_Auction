@@ -12,8 +12,8 @@ using MyGalaxy_Auction_Data_Access.Context;
 namespace MyGalaxy_Auction_Data_Access.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240725160031_mig1")]
-    partial class mig1
+    [Migration("20240730084140_mig")]
+    partial class mig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -247,6 +247,9 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
 
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<decimal>("EngineCapacity")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Image")
                         .IsRequired()

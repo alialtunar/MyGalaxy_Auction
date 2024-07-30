@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyGalaxy_Auction_Business.Abstract;
 using MyGalaxy_Auction_Business.Dtos;
@@ -70,8 +71,8 @@ namespace MyGalaxy_Auction.Controllers
             }
             return BadRequest();
         }
-
-        [HttpDelete("{vehicleId}")]
+        [Authorize(Roles = "Administrator")]
+        [HttpDelete("Remove/Vehicle{vehicleId}")]
         public async Task<IActionResult> DeleteVehicle([FromRoute]int vehicleId)
         {
             var result = await _vehicleService.DeleteVehicle(vehicleId);

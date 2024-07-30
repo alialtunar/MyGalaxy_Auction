@@ -13,7 +13,7 @@ namespace MyGalaxy_Auction_Data_Access.Domain
         [Key]
         public int PaymentHistoryId { get; set; }
 
-        public int IsActive { get; set; }
+        public bool IsActive { get; set; }
 
         public DateTime PayDate { get; set; }
 

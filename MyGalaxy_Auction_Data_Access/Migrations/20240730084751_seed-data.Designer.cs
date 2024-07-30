@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyGalaxy_Auction_Data_Access.Context;
 
@@ -11,9 +12,11 @@ using MyGalaxy_Auction_Data_Access.Context;
 namespace MyGalaxy_Auction_Data_Access.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240730084751_seed-data")]
+    partial class seeddata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -197,8 +200,8 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PaymentHistoryId"));
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                    b.Property<int>("IsActive")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("PayDate")
                         .HasColumnType("datetime2");
@@ -289,7 +292,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Toyota Camry",
                             Color = "Silver",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1728),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3319),
                             EngineCapacity = 2.5m,
                             Image = "https://i.gaw.to/content/photos/39/21/392165_2020_Toyota_Camry.jpg",
                             IsActive = true,
@@ -298,7 +301,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 25000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1663)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3300)
                         },
                         new
                         {
@@ -307,7 +310,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Honda Civic",
                             Color = "Blue",
-                            EndTime = new DateTime(2024, 8, 23, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1755),
+                            EndTime = new DateTime(2024, 8, 23, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3327),
                             EngineCapacity = 1.8m,
                             Image = "https://i.pinimg.com/originals/4f/b7/96/4fb796d99758f4889338c69efc74dbfe.jpg",
                             IsActive = false,
@@ -316,7 +319,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 18000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1754)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3326)
                         },
                         new
                         {
@@ -325,7 +328,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Ford F-150",
                             Color = "Red",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1764),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3330),
                             EngineCapacity = 5.0m,
                             Image = "https://www.autopartmax.com/images/cUpload/FORD%20Truck-F150%20Raptor.jpg",
                             IsActive = true,
@@ -334,7 +337,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 28000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1764)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3329)
                         },
                         new
                         {
@@ -343,7 +346,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Nissan Altima",
                             Color = "Black",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1772),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3333),
                             EngineCapacity = 2.5m,
                             Image = "https://www.jonathanmotorcars.com/imagetag/631/3/l/Used-2017-Nissan-Altima-25-SV-Premium.jpg",
                             IsActive = true,
@@ -352,7 +355,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 16000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1772)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3332)
                         },
                         new
                         {
@@ -361,7 +364,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Chevrolet Malibu",
                             Color = "Silver",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1785),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3336),
                             EngineCapacity = 2.4m,
                             Image = "https://cdn.carbuzz.com/gallery-images/2016-chevrolet-malibu-carbuzz-489817-1600.jpg",
                             IsActive = true,
@@ -370,7 +373,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 15500.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1776)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3335)
                         },
                         new
                         {
@@ -379,7 +382,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Ferrari 488 GTB",
                             Color = "Red",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1795),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3338),
                             EngineCapacity = 3.9m,
                             Image = "https://i.pinimg.com/originals/93/2e/fb/932efb625cc97155497cfabd53a57d71.jpg",
                             IsActive = true,
@@ -388,7 +391,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 300000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1795)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3338)
                         },
                         new
                         {
@@ -397,7 +400,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Lamborghini Huracan",
                             Color = "Yellow",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1807),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3341),
                             EngineCapacity = 5.2m,
                             Image = "https://w.forfun.com/fetch/03/033f1bda44fe68f0aaa4db19f84a2e54.jpeg",
                             IsActive = true,
@@ -406,7 +409,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 280000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1807)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3341)
                         },
                         new
                         {
@@ -415,7 +418,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Porsche 911",
                             Color = "White",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1817),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3344),
                             EngineCapacity = 3.0m,
                             Image = "https://avatars.mds.yandex.net/get-autoru-vos/6209275/1ee5dfabd4030a68195d9ac37ebf08b2/1200x900",
                             IsActive = true,
@@ -424,7 +427,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 180000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1817)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3344)
                         },
                         new
                         {
@@ -433,7 +436,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Aston Martin DB11",
                             Color = "Black",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1826),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3347),
                             EngineCapacity = 5.2m,
                             Image = "https://images.hgmsites.net/hug/2018-aston-martin-db11_100630564_h.jpg",
                             IsActive = true,
@@ -442,7 +445,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 250000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1825)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3347)
                         },
                         new
                         {
@@ -451,7 +454,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "McLaren 720S",
                             Color = "Orange",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1835),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3350),
                             EngineCapacity = 4.0m,
                             Image = "https://www.mclarencf.com/imagetag/42/main/l/New-2020-McLaren-720S-Spider.jpg",
                             IsActive = true,
@@ -460,7 +463,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 280000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1834)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3350)
                         },
                         new
                         {
@@ -469,7 +472,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Bugatti Chiron",
                             Color = "Blue",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1845),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3353),
                             EngineCapacity = 8.0m,
                             Image = "https://coolwallpapers.me/picsup/5650604-bugatti-chiron-wallpapers.jpg",
                             IsActive = true,
@@ -478,7 +481,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 350000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1844)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3353)
                         },
                         new
                         {
@@ -487,7 +490,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Koenigsegg Jesko",
                             Color = "Silver",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1855),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3356),
                             EngineCapacity = 5.0m,
                             Image = "https://wallpapercave.com/wp/wp5031567.jpg",
                             IsActive = true,
@@ -496,7 +499,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 400000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1854)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3355)
                         },
                         new
                         {
@@ -505,7 +508,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Ferrari SF90 Stradale",
                             Color = "Red",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1865),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3359),
                             EngineCapacity = 4.0m,
                             Image = "https://4kwallpapers.com/images/wallpapers/novitec-ferrari-sf90-stradale-2022-5k-8k-2880x1800-8481.jpeg",
                             IsActive = true,
@@ -514,7 +517,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 275000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1858)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3358)
                         },
                         new
                         {
@@ -523,7 +526,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Pagani Huayra",
                             Color = "Green",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1873),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3362),
                             EngineCapacity = 6.0m,
                             Image = "https://www.motorionline.com/wp-content/gallery/pagani-huayra-nc/Pagani-Huayra-NC-1.jpg",
                             IsActive = true,
@@ -532,7 +535,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 320000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1872)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3361)
                         },
                         new
                         {
@@ -541,7 +544,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Lexus LC 500",
                             Color = "Black",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1887),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3364),
                             EngineCapacity = 5.0m,
                             Image = "https://wallpapercave.com/wp/wp6603188.jpg",
                             IsActive = true,
@@ -550,7 +553,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 60000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1886)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3364)
                         },
                         new
                         {
@@ -559,7 +562,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Tesla Model S",
                             Color = "Blue",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1895),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3367),
                             EngineCapacity = 0.0m,
                             Image = "https://i.pinimg.com/originals/8f/b4/3b/8fb43b750028af047cbb0308c0e46014.jpg",
                             IsActive = true,
@@ -568,7 +571,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 90000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1895)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3367)
                         },
                         new
                         {
@@ -577,7 +580,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Audi R8",
                             Color = "Silver",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1903),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3370),
                             EngineCapacity = 5.2m,
                             Image = "https://wallpapercave.com/wp/wp8343229.jpg",
                             IsActive = true,
@@ -586,7 +589,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 120000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1902)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3370)
                         },
                         new
                         {
@@ -595,7 +598,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Mercedes-AMG GT",
                             Color = "Black",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1911),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3373),
                             EngineCapacity = 4.0m,
                             Image = "https://images.hdqwalls.com/download/mercedes-benz-sls-amg-yellow-5k-hv-3840x2400.jpg",
                             IsActive = true,
@@ -604,7 +607,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 110000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1910)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3373)
                         },
                         new
                         {
@@ -613,7 +616,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Nissan GT-R",
                             Color = "Blue",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1920),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3376),
                             EngineCapacity = 3.8m,
                             Image = "https://i.pinimg.com/originals/e9/75/81/e97581a73660b583b1d982ef23607c24.jpg",
                             IsActive = true,
@@ -622,7 +625,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 95000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1919)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3375)
                         },
                         new
                         {
@@ -631,7 +634,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Ford Mustang Shelby GT500",
                             Color = "Red",
-                            EndTime = new DateTime(2024, 10, 10, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1926),
+                            EndTime = new DateTime(2024, 10, 10, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3379),
                             EngineCapacity = 5.2m,
                             Image = "https://www.mustangspecs.com/wp-content/uploads/2022/09/carpixel.net-2022-shelby-gt500-mustang-heritage-edition-106565-hd.jpg",
                             IsActive = true,
@@ -640,7 +643,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 75000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1926)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3378)
                         },
                         new
                         {
@@ -649,7 +652,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             AuctionPrice = 0.0,
                             BrandAndModel = "Porsche Cayman GT4",
                             Color = "Yellow",
-                            EndTime = new DateTime(2024, 9, 16, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1932),
+                            EndTime = new DateTime(2024, 9, 16, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3382),
                             EngineCapacity = 4.0m,
                             Image = "https://media.porsche.com/mediakit/718-cayman-gt4-rs/00-photos/media-drive/718-Cayman-GT4-RS-GT-silbermetallic-S-GO1306/image-thumb__47840__mk2-modal-item/porschecayman_estoril07005_high_1.jpg",
                             IsActive = true,
@@ -658,7 +661,7 @@ namespace MyGalaxy_Auction_Data_Access.Migrations
                             PlateNumber = "34AA21",
                             Price = 95000.00m,
                             SellerId = "293f367e-07cb-420b-af5e-d8ba42765533",
-                            StartTime = new DateTime(2024, 7, 30, 12, 34, 14, 624, DateTimeKind.Local).AddTicks(1931)
+                            StartTime = new DateTime(2024, 7, 30, 11, 47, 51, 436, DateTimeKind.Local).AddTicks(3381)
                         });
                 });
 
