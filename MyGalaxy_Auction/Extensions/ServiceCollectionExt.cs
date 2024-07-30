@@ -1,5 +1,7 @@
-﻿using MyGalaxy_Auction_Business.Abstract;
+﻿
+using MyGalaxy_Auction_Business.Abstract;
 using MyGalaxy_Auction_Business.Concreate;
+using MyGalaxy_Auction_Core.MailHelper;
 using MyGalaxy_Auction_Core.Models;
 
 namespace MyGalaxy_Auction.Extensions
@@ -11,6 +13,8 @@ namespace MyGalaxy_Auction.Extensions
             #region services
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IVehicleService, VehicleService>();
+            services.AddScoped<IBidService, BidService>();
+            services.AddScoped<IMailService,MailService>();
             services.AddScoped(typeof(ApiResponse));
             #endregion
             return services;
